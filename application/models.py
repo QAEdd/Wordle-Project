@@ -5,6 +5,8 @@ class User(db.Model):
     username = db.Column(db.String(50))
     password = db.Column(db.String(50))
     correct_back = db.relationship('Correctwords', backref='User')
+    def __str__(self):
+        return f"{self.username}, {self.password}"
 
 class Correctwords(db.Model):
     correct_id = db.Column(db.Integer, primary_key = True)
