@@ -1,4 +1,5 @@
-from flask import redirect, url_for, render_template, request
+from collections import UserList
+from flask import redirect, render_template_string, url_for, render_template, request
 from application import app, db
 from application.models import Correctwords, User, Guess
 from application.forms import RegisterUser, Login
@@ -15,7 +16,8 @@ def login():
         x = x.join(str(t) for t in User.query.filter_by(username=username_))
         # return x
         user_list = x.split(',')
-        # return f'{user_list[1]} + {user_list[0]} + {username_} + {password_}'
+        user_list[1] = user_list[1].replace(" ", "")
+        # return f'{user_list[1]} {user_list[0]} {username_} {password_}'
         if user_list[1] == password_:
             return redirect(url_for('home'))
         # else:
