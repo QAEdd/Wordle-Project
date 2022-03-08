@@ -6,3 +6,4 @@ wtforms
 flask-testing
 pytest
 pytest-cov
+flask-login

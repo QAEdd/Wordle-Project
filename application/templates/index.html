@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 {% block body %} 
     <h2>Home</h2>
-    <a href="{{url_for('register') }}">Register</a>
+    <a href="{{url_for('addwordle')}}">Save a Wordle</a>
+    <br>
+    <a href="{{url_for('wordlestats')}}">Wordle Stats</a>
 {% endblock body %}

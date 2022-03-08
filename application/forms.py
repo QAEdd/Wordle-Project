@@ -16,3 +16,13 @@ class Login(FlaskForm):
     username = StringField("Username: ")
     passw = StringField("Password: ")
     submit = SubmitField("Submit")
+
+class Addwordle(FlaskForm):
+    correctword = StringField("Correct word: ")
+    guess1 = StringField("Guess1: ")
+    guess2 = StringField("Guess2: ")
+    guess3 = StringField("Guess3: ")
+    guess4 = StringField("Guess4: ")
+    guess5 = StringField("Guess5: ")
+    guess6 = StringField("Guess6: ")
+    submit = SubmitField("Submit")
