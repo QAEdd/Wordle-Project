@@ -26,3 +26,24 @@ class Addwordle(FlaskForm):
     guess5 = StringField("Guess5: ")
     guess6 = StringField("Guess6: ")
     submit = SubmitField("Submit")
+
+class Deleteword(FlaskForm):
+    word_ = SelectField('Words', choices=[])
+    submit = SubmitField('Submit')
+    delete = SubmitField('Delete')
+
+class Update(FlaskForm):
+    word_ = SelectField('Words', choices=[])
+    guess1 = StringField("Guess1: ")
+    guess2 = StringField("Guess2: ")
+    guess3 = StringField("Guess3: ")
+    guess4 = StringField("Guess4: ")
+    guess5 = StringField("Guess5: ")
+    guess6 = StringField("Guess6: ")
+    submit = SubmitField("Submit")
+    update_ = SubmitField("Update")
+
+
+class Search(FlaskForm):
+    search = StringField("What Word would you like to search for? ")
+    search_ = SubmitField("Search")

@@ -28,3 +28,9 @@ class Guess(db.Model):
     def __str__(self):
         return f"{self.guess1},{self.guess2},{self.guess3},{self.guess4},{self.guess5},{self.guess6}"
 
+class Loggeduser(db.Model):
+    log_id = db.Column(db.Integer, primary_key = True)
+    log = db.Column(db.Integer)
+    def __str__(self):
+        return f'{self.log}'
+
