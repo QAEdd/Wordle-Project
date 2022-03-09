@@ -43,7 +43,6 @@ def login():
             # newlog = user_list[0]
                 db.session.add(newlog)
                 db.session.commit()
-            log = list(Loggeduser.query.all())
             # return f'{log}'
             return render_template('index.html')
             # return redirect(url_for('home', list=log))
@@ -58,20 +57,20 @@ def login():
         #     return render_template('login.html', message = "Username not found", form = form)
     return render_template('login.html', message = "login to continue or " , form = form)
 
-@app.route('/test')
-def test():
-    x = ''
-    log = Loggeduser.query.all()
-    return f'{log}'
-    username_='spiffen'
-    # x = x.join(str(t) for t in User.query.filter_by(username=username_))
-    test = x.split(',')
-    # return test[1]
-    # return '<br>'.join(str(t) for t in User.query.all())
-    # return '<br>'.join(str(t) for t in Correctwords.query.all())
-    user3 = list(Guess.query.all())
-    return f'{user3[0]}'
-    return '<br>'.join(str(t) for t in User.query.filter_by(username='test'))
+# @app.route('/test')
+# def test():
+#     x = ''
+#     log = Loggeduser.query.all()
+#     return f'{log}'
+#     username_='spiffen'
+#     # x = x.join(str(t) for t in User.query.filter_by(username=username_))
+#     test = x.split(',')
+#     # return test[1]
+#     # return '<br>'.join(str(t) for t in User.query.all())
+#     # return '<br>'.join(str(t) for t in Correctwords.query.all())
+#     user3 = list(Guess.query.all())
+#     return f'{user3[0]}'
+#     return '<br>'.join(str(t) for t in User.query.filter_by(username='test'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -94,8 +93,8 @@ def wordlestats():
     log = str(Loggeduser.query.get(1))
     test = db.session.query(Guess, Correctwords).join(Correctwords).filter_by(userid_fk=log).all()
     # test = Guess.query.all()
-    # return f'{test[1]}'
-    g = len(test[1])
+    # return f'{test[1][0]}'
+    g = len(test[0]) - 1
     # return f'{g}'
     while g >= 0:
         g = g - 1
@@ -131,10 +130,10 @@ def wordlestats():
     # list = g.split(',')
     # count = count + Counter(list)
 
-    return f'{countList[0]}'
+    # return f'{countList[0]}'
     # return f'<br>'.join(str(t) for t in test[1])
 
-    return f'<br>'.join(str(t) for t in Guess.query.all())
+    # return f'<br>'.join(str(t) for t in Guess.query.all())
 
 @app.route('/deleteword', methods=['GET','POST'])
 def deleteword():
