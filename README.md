@@ -53,7 +53,7 @@ The jenkins sudo chmod makes the test.sh exceuteable and in the second picture y
 ![CiPipeline](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/cipipeline.png)
 The Ci pipeline i used
 
-##Testing
+## Testing
 As mentioned previously the testing was automated by Jenkins. It is a key part of the CI pipeline and i implemented unit testing for this project.
 Unit testing i did went along and tested the key aspects of my program being the create, read, update and delete.  Jenkins then outputted a a coverage report (see below) of how the tests went.
 
@@ -62,7 +62,7 @@ As seen on the coverage report i have not been able to hit the 100% tests on the
 
 ## The App
 
-###Registration 
+### Registration 
 ![Registration](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/registration.png)
 
 The registration page allows users to create a User.
