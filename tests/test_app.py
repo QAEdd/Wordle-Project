@@ -46,6 +46,7 @@ class TestLogin(TestBase):
         self.assert200(response)
         self.assertIn(b'1',response.data)
 
+
     def test_login_fail(self):
         response = self.client.get(url_for('login'),
         data = dict(username="SampleUser",password="nothtere"))
