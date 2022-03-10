@@ -52,6 +52,8 @@ class TestLogin(TestBase):
         self.assert200(response)
 
     
+
+    
 class TestRegister(TestBase):
     def test_register_get(self):
         response = self.client.get(url_for('register'))
@@ -85,8 +87,7 @@ class TestUpdateWordle(TestBase):
 
     def test_updatewordle_post(self):
         response = self.client.post(url_for('updatewords'),
-        data = dict(word_="plant", guess1="words",guess2="pains", guess3="plank", guess4="women",guess5="spiny",guess6="shiny")
-        )
+        data = dict(word_="plant", guess1="words",guess2="pains", guess3="plank", guess4="women",guess5="spiny",guess6="shiny"))
         self.assert200(response)
 
 class TestDeleteWordle(TestBase):
@@ -94,16 +95,16 @@ class TestDeleteWordle(TestBase):
         response = self.client.get(url_for('deleteword'))
         self.assert200(response)
 
-    def test_deleteworlde_post(self):
-        response = self.client.post(url_for('deleteword'),
-        data = dict(word_='plant'))
-        self.assert200(response)
+    # def test_deleteworlde_post(self):
+    #     response = self.client.post(url_for('deleteword'),
+    #     data = dict(word_='plant'))
+    #     self.assert200(response)
     
     def test_deleteworlde_post(self):
         response = self.client.post(url_for('deleteword'),
-        data = dict(deletew_='plant', delete=True))
+        data = dict(delwords='print,gleam,joint,jokes,gnome,plant',deletew='plant'))
         self.assert200(response)
-        self.assertNotIn(b'print', response.data)
+        self.assertNotIn(b'words deleted', response.data)
 
 
 class TestSearchWordle(TestBase):

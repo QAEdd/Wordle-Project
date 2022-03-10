@@ -143,6 +143,7 @@ def deleteword():
     if form.delete.data == True:
         deletew = form.word_.data
         delwords = Guess.query.get(deletew)
+        # return f'{delwords}'
         db.session.delete(delwords)
         db.session.commit()
         return render_template('deleteword.html', form=form, message= 'words deleted')
