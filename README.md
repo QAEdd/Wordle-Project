@@ -1,13 +1,13 @@
 # Wordle-Project
 
 ## Contents:
-* [The Project] (#The-Project)
-* [Project Planning] (#Project-Planning)
-* [Risk Assessment] (#Risk-Assessment)
-* [Ci Pipeline] (#CI-Pipeline)
-* [Testing](#Testing)
-* [The App] (#The-App)
-* [What went wrong] (#What-went-wrong)
+* The Project
+* Project Planning
+* Risk Assessment
+* Ci Pipeline
+* Testing
+* The App
+* What went wrong
 
 ## The Project:
 The idea behind this project was to make a addition to the Wordle app (a game where you try guess a random 5 letter word in 6 guesses or less) that has taken off recently, by making a more detailed way of storing the guesses so the user is able to have a better understanding of the words they often use or do not use in their guesses.
