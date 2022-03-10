@@ -64,24 +64,31 @@ As seen on the coverage report i have not been able to hit the 100% tests on the
 
 ###Registration 
 ![Registration](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/registration.png)
+
 The registration page allows users to create a User.
 
 ![Login](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/login.png)
+
 The login page reads the user database and possibly allows the user to log in if there username and password is found
 
-![Home](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/home.png}
+![Home](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/home.png)
+
 The home page allows the user to access each of the other pages of the app
 
 ![Save](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/save.png)
+
 The save page creates a entry for a correct word and for a set of guesses.
 
-![Stats](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/stats.pn)
+![Stats](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/stats.png)
+
 The stats page automatically looks up the users most used word on load and allows for the user to look up how much they have used other words.
 
 ![Update](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/update.png)
+
 The update page allows users to change the entry they put in for a guess that coresponds to a correct word
 
 ![Delete](https://github.com/QAEdd/Wordle-Project/blob/main/wordleproj/delete.png)
+
 The delete page allows the user to delete the entry they have associated with a correct word.
 
 
