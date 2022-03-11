@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %} 
+    <h2>Home</h2>
+    <a href="{{url_for('addwordle')}}">Save a Wordle</a>
+    <br>
+    <a href="{{url_for('wordlestats')}}">Wordle Stats</a>
+    <br>
+    <a href="{{url_for('deleteword')}}">Delete a wordle</a>
+    <br>
+    <a href="{{url_for('updatewords')}}">Update words</a>
+{% endblock body %}

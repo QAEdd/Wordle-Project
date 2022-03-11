@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Register </h2>
+<a href="{{url_for('login') }}">Back</a>
+<div class="form">
+    <form method="POST" action="">
+        <br>
+        {{ form.user.label }} {{ form.user }}
+        <br>
+        {{ form.password.label }} {{ form.password }}
+        <br>
+        {{ form.confirmpass.label }} {{ form.confirmpass }}
+        <br>
+        {{ form.submit }}
+    </form>
+</div>
+{% endblock body %}

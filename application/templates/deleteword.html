@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Delete a guess to do with a word </h2>
+<a href="{{url_for('home') }}">Home</a>
+<div class="form">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <br>
+        {{ form.word_.label  }} {{ form.word_ }}
+        <br>
+        {{ form.submit }}
+        <h4>words to delete {{ message }}</h4>
+        {{ form.delete  }}
+    </form>
+    
+</div>
+{% endblock body %}
