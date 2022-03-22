@@ -2,7 +2,7 @@ version: "3.8"
 services:
   mysql:
     container_name: mysql
-    image: edd-a/fund-proj-db:latest
+    image: edd-a/wordleproj-db:latest
     build: ./db
     volumes:
       - type: volume
@@ -15,8 +15,8 @@ services:
       MYSQL_DATABASE: app-db
   flask-app:
     container_name: flask-app
-    image: edd-a/fund-proj-app:latest
-    build: ./flask-app
+    image: edd-a/wordleproj-app:latest
+    build: ./wordleproject
     networks:
       - app-net
     environment:
@@ -37,8 +37,6 @@ services:
       - type: bind
         source: ./nginx.conf
         target: /etc/nginx/nginx.conf
-    depends_on:
-      - "flask-app"
 volumes:
   app-vol:
 networks:
