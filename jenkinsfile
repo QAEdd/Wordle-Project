@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                dir('wordleproject') {
+                // dir('wordleproject') {
                     // sh "rm tests/test_app.py*"
                     sh "bash test.sh"
-                }
+                // }
             }
         }
         stage('build and push') {
