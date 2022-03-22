@@ -4,7 +4,7 @@ pipeline {
         stage('test') {
             steps {
                 dir('wordleproject') {
-                    sh "rm tests/test_app.py*"
+                    // sh "rm tests/test_app.py*"
                     sh "bash test.sh"
                 }
             }
